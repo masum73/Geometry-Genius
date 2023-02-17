@@ -1,34 +1,46 @@
-
-function getInputFieldValue(inputId){
-    const inputField = document.getElementById(inputId);
-    const inputFieldString = inputField.value;
-    const inputValue = parseFloat(inputFieldString);
-    return inputValue;
-}
-
-function areaCalculationWithThreeNumbers(firstValue, secondValue){
-    const number = 0.5;
-    const area = number * firstValue * secondValue;
-    return area;
-}
-
-function getInnerTextValue(elementId){
-    const innerField = document.getElementById(elementId);
-    const innerFieldString = innerField.innerText;
-    const innerFieldValue = parseFloat(innerFieldString);
-    return innerFieldValue;
-}
-
-function setInnerTextValue(elementId,firstValue,secondValue){
-    const innerField = document.getElementById(elementId);
-    const totalArea = areaCalculationWithThreeNumbers(firstValue, secondValue);
-    innerField.innerText = totalArea;
-}
+//triangle calculation
 document.getElementById('btn-triangle-calculate').addEventListener('click',function(){
 
     const triangleFirstInputValue = getInputFieldValue('triangle-first-input');
     const triangleLastInputValue = getInputFieldValue('triangle-last-input');
 
-    setInnerTextValue('triangle-calculation-field',triangleFirstInputValue, triangleLastInputValue);
+    setInnerTextValueWithThreeNumbers('triangle-calculation-field',triangleFirstInputValue, triangleLastInputValue);
    
+})
+//rectangle calculation
+document.getElementById('btn-rectangle-calculate').addEventListener('click',function(){
+    const rectangleFirstInputValue = getInputFieldValue('rectangle-first-input');
+    const rectangleLastInputValue = getInputFieldValue('rectangle-last-input');
+
+    setInnerTextValueWithTwoNumbers('rectangle-calculation-field', rectangleFirstInputValue, rectangleLastInputValue)
+})
+//Parallelogram calculation
+document.getElementById('btn-parallelogram-calculate').addEventListener('click',function(){
+    const parallelogramFirstInputValue = getInputFieldValue('parallelogram-first-input');
+    const parallelogramLastInputValue = getInputFieldValue('parallelogram-last-input');
+
+    setInnerTextValueWithTwoNumbers('parallelogram-calculation-field', parallelogramFirstInputValue, parallelogramLastInputValue)
+})
+//rhombus calculation
+document.getElementById('btn-rhombus-calculate').addEventListener('click',function(){
+    const rhombusFirstInputValue = getInputFieldValue('rhombus-first-input');
+    const rhombusLastInputValue = getInputFieldValue('rhombus-last-input');
+
+    setInnerTextValueWithThreeNumbers('rhombus-calculation-field', rhombusFirstInputValue, rhombusLastInputValue)
+})
+//pentagon calculation 
+document.getElementById('btn-pentagon-calculate').addEventListener('click',function(){
+    const pentagonFirstInputValue = getInputFieldValue('pentagon-first-input');
+    const pentagonLastInputValue = getInputFieldValue('pentagon-last-input');
+
+    setInnerTextValueWithThreeNumbers('pentagon-calculation-field', pentagonFirstInputValue, pentagonLastInputValue)
+})
+
+
+//ellipse calculation
+document.getElementById('btn-ellipse-calculate').addEventListener('click',function(){
+    const pentagonFirstInputValue = getInputFieldValue('ellipse-first-input');
+    const pentagonLastInputValue = getInputFieldValue('ellipse-last-input');
+
+    setEllipseValue('ellipse-calculation-field', pentagonFirstInputValue, pentagonLastInputValue)
 })

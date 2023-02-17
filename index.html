@@ -33,15 +33,15 @@
                         <!-- inputs -->
                         <div class="flex flex-row gap-2 mb-3">
                             <div class="flex flex-row gap-2 justify-center items-center">
-                                <input type="number" name="" id="" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="b">
+                                <input type="number" name="" id="triangle-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="b">
                                 <label for="" class="text-sm font-medium">cm</label>
                             </div>
                             <div class="flex flex-row gap-2 justify-center items-center">
-                                <input type="number" name="" id="" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="h">
+                                <input type="number" name="" id="triangle-last-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="h">
                                 <label for="" class="text-sm font-medium">cm</label>
                             </div>
                         </div>
-                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                        <button id="btn-triangle-calculate" class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
                     </div>
                 </div>
                 <div class="bg-white border border-gray-200 rounded-lg flex flex-col justify-center items-center">
@@ -143,10 +143,10 @@
             <!-- area calculation div -->
             <div class="ml-6 px-6 border border-gray-200 rounded-lg h-3/5 w-1/5">
                 <h1 class="text-xl font-medium underline text-center mb-6">Area Calculation</h1>
-                <div class="hidden">
+                <div class="">
                     <div class="flex justify-between items-center mb-3">
                         <h1 class="">1. Triangle</h1>
-                        <h1 class="text-center">00</h1>
+                        <h1 id="triangle-calculation-field" class="text-center">0</h1>
                         <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
                     </div>
                     <div class="flex justify-between items-center mb-3">

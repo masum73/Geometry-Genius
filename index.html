@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
     <!-- tailwind CDN added -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <h1>Welcome</h1>
+    <!-- Flowbite CDN added -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+  </head>
+  <body>
+    <header class="flex justify-between items-center w-11/12 mx-auto mt-6 bg-sky-200 rounded-lg">
+      <div class="m-5 text-3xl font-medium">
+        <h1>Interactive</h1>
+        <h3 class="text-neutral-500">Geometry Genius</h3>
+      </div>
+      <div class="m-5 text-xl font-medium">
+        <button class="px-8 py-2 bg-blue-500 rounded-lg text-white">Blog</button>
+      </div>
+    </header>
 
+    <main class="w-11/12 mx-auto my-6">
+        <section class="flex justify-between text-center">
+            <!-- cards div -->
+            <div class="grid grid-cols-3 gap-3 ">
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <img class="" src="images/triangle.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold">Triangle</h5>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
+                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <img class="" src="images/rectangle.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold">Rectangle</h5>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
+                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <img class="" src="images/parallelogram.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold">Parallelogram</h5>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
+                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <img class="" src="images/rhombus.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold">Rhombus</h5>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
+                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <img class="" src="images/pentagon.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold">Pentagon</h5>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
+                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <img class="" src="images/ellipse.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold">Ellipse</h5>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
+                        <button class="px-16 py-2 bg-blue-500 rounded-lg text-white font-medium">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- area calculation div -->
+            <div class="bg-yellow-300">
+                <h1 class="text-xl font-medium underline">Area Calculation</h1>
+            </div>
+        </section>
+    </main>
     <!-- JS file added -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

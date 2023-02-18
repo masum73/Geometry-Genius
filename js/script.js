@@ -62,7 +62,7 @@ document.getElementById('btn-rhombus-calculate').addEventListener('click',functi
 document.getElementById('btn-pentagon-calculate').addEventListener('click',function(){
     const pentagonFirstInputValue = getInputFieldValue('pentagon-first-input');
     const pentagonLastInputValue = getInputFieldValue('pentagon-last-input');
-    const area = areaCalculationWithTwoNumbers(pentagonFirstInputValue,pentagonLastInputValue);
+    const area = areaCalculationWithThreeNumbers(pentagonFirstInputValue,pentagonLastInputValue);
     displayData('Pentagon',area);
 })
 

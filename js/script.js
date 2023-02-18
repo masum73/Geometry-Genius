@@ -3,15 +3,15 @@ let serial = 0;
 // display data - area calculation part
 function displayData(areaName, areaCalculation) {
     if(areaCalculation === undefined){
-        alert('enter valid input');
+        alert('Please enter a valid input');
         return;
     }else{
         serial = serial + 1;
         const container = document.getElementById("table-container");
         const tr = document.createElement("tr");
-        tr.classList.add('marginBottom');
+        tr.classList.add('height');
         tr.innerHTML = `
-      <td>${serial}</td>
+      <td>${serial}.</td>
       <td>${areaName}</td>
       <td>${areaCalculation}</td>
        
@@ -30,12 +30,8 @@ function displayData(areaName, areaCalculation) {
 
 //triangle calculation
 document.getElementById('btn-triangle-calculate').addEventListener('click',function(){
-
     const triangleFirstInputValue = getInputFieldValue('triangle-first-input');
     const triangleLastInputValue = getInputFieldValue('triangle-last-input');
-
-    console.log(typeof triangleFirstInputValue);
-
     const area = areaCalculationWithThreeNumbers(triangleFirstInputValue, triangleLastInputValue);
     displayData('Triangle',area);
     
@@ -45,10 +41,8 @@ document.getElementById('btn-triangle-calculate').addEventListener('click',funct
 document.getElementById('btn-rectangle-calculate').addEventListener('click',function(){
     const rectangleFirstInputValue = getInputFieldValue('rectangle-first-input');
     const rectangleLastInputValue = getInputFieldValue('rectangle-last-input');
-
     const area = areaCalculationWithTwoNumbers(rectangleFirstInputValue,rectangleLastInputValue);
     displayData('Rectangle',area);
-    
 })
 //Parallelogram calculation
 document.getElementById('btn-parallelogram-calculate').addEventListener('click',function(){
@@ -56,8 +50,6 @@ document.getElementById('btn-parallelogram-calculate').addEventListener('click',
     const parallelogramLastInputValue = getInputFieldValue('parallelogram-last-input');
     const area = areaCalculationWithTwoNumbers(parallelogramFirstInputValue,parallelogramLastInputValue);
     displayData('Parallelogram',area);
-    
-
 })
 //rhombus calculation
 document.getElementById('btn-rhombus-calculate').addEventListener('click',function(){
@@ -65,8 +57,6 @@ document.getElementById('btn-rhombus-calculate').addEventListener('click',functi
     const rhombusLastInputValue = getInputFieldValue('rhombus-last-input');
     const area = areaCalculationWithThreeNumbers(rhombusFirstInputValue,rhombusLastInputValue)
     displayData('Rhombus',area);
-    
-
 })
 //pentagon calculation 
 document.getElementById('btn-pentagon-calculate').addEventListener('click',function(){
@@ -74,7 +64,6 @@ document.getElementById('btn-pentagon-calculate').addEventListener('click',funct
     const pentagonLastInputValue = getInputFieldValue('pentagon-last-input');
     const area = areaCalculationWithTwoNumbers(pentagonFirstInputValue,pentagonLastInputValue);
     displayData('Pentagon',area);
-    
 })
 
 
@@ -84,12 +73,10 @@ document.getElementById('btn-ellipse-calculate').addEventListener('click',functi
     const pentagonLastInputValue = getInputFieldValue('ellipse-last-input');
     const area = calculateEllipseArea(pentagonFirstInputValue,pentagonLastInputValue)
     displayData('Ellipse',area);
-
 })
 
-// color change
+// random color change 
 const colorChange = document.getElementsByClassName('color-change');
-
 for(const color of colorChange){
     function randomColor() {
         return Math.floor(Math.random() * 255);
@@ -99,7 +86,6 @@ for(const color of colorChange){
         + randomColor() + ',' + randomColor() 
         + ',' + randomColor() + '\)'
     })
-    
 }
 
 

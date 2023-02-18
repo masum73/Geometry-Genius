@@ -9,8 +9,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite CDN added -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+    <!-- custom css -->
     <style>
-        .marginBottom{
+        .height{
             height: 50px;
         }
     </style>
@@ -28,7 +29,7 @@
 
     <main class="w-11/12 mx-auto my-6">
         <section class="flex flex-col md:flex-row justify-start">
-            <!-- cards div -->
+            <!-- grid cards div -->
             <div class="grid lg:grid-cols-3 md:grid-cols-1 gap-3 mx-auto md:w-9/12">
                 <!-- triangle div -->
                 <div class="bg-white border border-gray-200 rounded-lg flex flex-col justify-center items-center color-change">
@@ -36,7 +37,7 @@
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl  font-bold">Triangle</h5>
                         <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x b x h</p>
-                        <!-- inputs -->
+                        <!-- triangle inputs -->
                         <div class="flex flex-row gap-2 mb-3">
                             <div class="flex flex-row gap-2 justify-center items-center">
                                 <input type="number" name="" id="triangle-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="b">
@@ -56,7 +57,7 @@
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl font-bold">Rectangle</h5>
                         <p class="mb-3 font-normal text-gray-700">Area(A) = w x l</p>
-                        <!-- inputs -->
+                        <!-- rectangle inputs -->
                         <div class="flex flex-row gap-2 mb-3">
                             <div class="flex flex-row gap-2 justify-center items-center">
                                 <input type="number" name="" id="rectangle-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="w">
@@ -76,7 +77,7 @@
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl font-bold">Parallelogram</h5>
                         <p class="mb-3 font-normal text-gray-700">Area(A) = b x h</p>
-                        <!-- inputs -->
+                        <!-- parallelogram inputs -->
                         <div class="flex flex-row gap-2 mb-3">
                             <div class="flex flex-row gap-2 justify-center items-center">
                                 <input type="number" name="" id="parallelogram-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="b">
@@ -96,7 +97,7 @@
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl font-bold">Rhombus</h5>
                         <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                       <!-- inputs -->
+                       <!-- rhombus inputs -->
                        <div class="flex flex-row gap-2 mb-3">
                         <div class="flex flex-row gap-2 justify-center items-center">
                             <input type="number" name="" id="rhombus-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="d1">
@@ -116,7 +117,7 @@
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl font-bold">Pentagon</h5>
                         <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x p x b</p>
-                        <!-- inputs -->
+                        <!-- pentagon inputs -->
                         <div class="flex flex-row gap-2 mb-3">
                             <div class="flex flex-row gap-2 justify-center items-center">
                                 <input type="number" name="" id="pentagon-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="p">
@@ -136,7 +137,7 @@
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl font-bold">Ellipse</h5>
                         <p class="mb-3 font-normal text-gray-700">Area(A) = &#960;ab</p>
-                        <!-- inputs -->
+                        <!-- ellipse inputs -->
                         <div class="flex flex-row gap-2 mb-3">
                             <div class="flex flex-row gap-2 justify-center items-center">
                                 <input type="number" name="" id="ellipse-first-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="a">
@@ -157,47 +158,10 @@
               <div id="area-calculation-div" class="">
                 <table class="table w-full">
                     <tbody id="table-container">
-                      <!-- <tr>
-                        <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                      </tr> -->
+                        <!-- dynamically html will be added here -->
                     </tbody>
                 </table>
-                    <!-- <div id="triangle" class="flex justify-between items-center mb-3 hidden">
-                        <h1 class=""><span id="triangle-serial">1</span>. Triangle</h1>
-                        <h1 id="triangle-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
-                    </div>
-                    <div id="rectangle" class="flex justify-between items-center mb-3 hidden">
-                        <h1 class=""><span id="rectangle-serial">2</span>. Rectangle</h1>
-                        <h1 id="rectangle-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
-                    </div>
-                    <div id="parallelogram" class="flex justify-between items-center mb-3 hidden">
-                        <h1 class=""><span class="serial-number">3</span>. Parallelogram</h1>
-                        <h1 id="parallelogram-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
-                    </div>
-                    <div id="rhombus" class="flex justify-between items-center mb-3 hidden">
-                        <h1 class=""><span class="serial-number">4</span>. Rhombus</h1>
-                        <h1 id="rhombus-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
-                    </div>
-                    <div id="pentagon" class="flex justify-between items-center mb-3 hidden">
-                        <h1 class=""><span class="serial-number">5</span>. Pentagon</h1>
-                        <h1 id="pentagon-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
-                    </div>
-                    <div id="ellipse" class="flex justify-between items-center mb-3 hidden">
-                        <h1 class=""><span class="serial-number">6</span>. Ellipse</h1>
-                        <h1 id="ellipse-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
-                    </div> -->
               </div>
-
-
-                
             </div>
         </section>
     </main>

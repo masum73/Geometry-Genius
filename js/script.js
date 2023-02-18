@@ -9,6 +9,7 @@ function displayData(areaName, areaCalculation) {
         serial = serial + 1;
         const container = document.getElementById("table-container");
         const tr = document.createElement("tr");
+        tr.classList.add('marginBottom');
         tr.innerHTML = `
       <td>${serial}</td>
       <td>${areaName}</td>
@@ -21,6 +22,7 @@ function displayData(areaName, areaCalculation) {
       
     `;
     container.appendChild(tr);
+
     }
     
   }

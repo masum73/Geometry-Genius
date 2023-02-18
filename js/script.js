@@ -1,43 +1,72 @@
 //triangle calculation
+let serial = 0;
+function displayData(serial, areaName, areaCalculation) {
+    const container = document.getElementById("table-container");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${serial}</td>
+      <td>${areaName}</td>
+      <td>${areaCalculation}</td>
+       
+      <td>cm<sup>2</sup></td>
+      <td>
+      <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
+      </td>
+      
+    `;
+    container.appendChild(tr);
+  }
+
 document.getElementById('btn-triangle-calculate').addEventListener('click',function(){
 
     const triangleFirstInputValue = getInputFieldValue('triangle-first-input');
     const triangleLastInputValue = getInputFieldValue('triangle-last-input');
 
-    setInnerTextValueWithThreeNumbers('triangle-calculation-field',triangleFirstInputValue, triangleLastInputValue);
-    displayCalculation('triangle');
+    console.log(triangleFirstInputValue);
+    console.log(triangleLastInputValue);
+
+    const area = areaCalculationWithThreeNumbers(triangleFirstInputValue, triangleLastInputValue);
+    console.log(area);
+
+    serial = serial + 1;
+    displayData(serial,'Triangle',area);
+
 })
 //rectangle calculation
 document.getElementById('btn-rectangle-calculate').addEventListener('click',function(){
     const rectangleFirstInputValue = getInputFieldValue('rectangle-first-input');
     const rectangleLastInputValue = getInputFieldValue('rectangle-last-input');
 
-    setInnerTextValueWithTwoNumbers('rectangle-calculation-field', rectangleFirstInputValue, rectangleLastInputValue);
-    displayCalculation('rectangle');
+    const area = areaCalculationWithTwoNumbers(rectangleFirstInputValue,rectangleLastInputValue);
+
+    serial = serial+1;
+    displayData(serial,'Rectangle',area);
 })
 //Parallelogram calculation
 document.getElementById('btn-parallelogram-calculate').addEventListener('click',function(){
     const parallelogramFirstInputValue = getInputFieldValue('parallelogram-first-input');
     const parallelogramLastInputValue = getInputFieldValue('parallelogram-last-input');
+    const area = areaCalculationWithTwoNumbers(parallelogramFirstInputValue,parallelogramLastInputValue);
+    serial = serial+1;
+    displayData(serial,'Parallelogram',area);
 
-    setInnerTextValueWithTwoNumbers('parallelogram-calculation-field', parallelogramFirstInputValue, parallelogramLastInputValue);
-    displayCalculation('parallelogram');
 })
 //rhombus calculation
 document.getElementById('btn-rhombus-calculate').addEventListener('click',function(){
     const rhombusFirstInputValue = getInputFieldValue('rhombus-first-input');
     const rhombusLastInputValue = getInputFieldValue('rhombus-last-input');
+    const area = areaCalculationWithThreeNumbers(rhombusFirstInputValue,rhombusLastInputValue)
+    serial = serial+1;
+    displayData(serial,'Rhombus',area);
 
-    setInnerTextValueWithThreeNumbers('rhombus-calculation-field', rhombusFirstInputValue, rhombusLastInputValue);
-    displayCalculation('rhombus')
 })
 //pentagon calculation 
 document.getElementById('btn-pentagon-calculate').addEventListener('click',function(){
     const pentagonFirstInputValue = getInputFieldValue('pentagon-first-input');
     const pentagonLastInputValue = getInputFieldValue('pentagon-last-input');
-
-    setInnerTextValueWithThreeNumbers('pentagon-calculation-field', pentagonFirstInputValue, pentagonLastInputValue);
-    displayCalculation('pentagon')
+    const area = areaCalculationWithTwoNumbers(pentagonFirstInputValue,pentagonLastInputValue);
+    serial = serial+1;
+    displayData(serial,'Pentagon',area);
 })
 
 
@@ -45,26 +74,26 @@ document.getElementById('btn-pentagon-calculate').addEventListener('click',funct
 document.getElementById('btn-ellipse-calculate').addEventListener('click',function(){
     const pentagonFirstInputValue = getInputFieldValue('ellipse-first-input');
     const pentagonLastInputValue = getInputFieldValue('ellipse-last-input');
+    const area = calculateEllipseArea(pentagonFirstInputValue,pentagonLastInputValue)
+    serial = serial+1;
+    displayData(serial,'Pentagon',area);
 
-    setEllipseValue('ellipse-calculation-field', pentagonFirstInputValue, pentagonLastInputValue);
-    displayCalculation('ellipse')
 })
 
 // color change
 const colorChange = document.getElementsByClassName('color-change');
-console.log(colorChange);
 
 for(const color of colorChange){
-    console.log(color);
     function randomColor() {
         return Math.floor(Math.random() * 255);
     }
     color.addEventListener('mouseenter',function(){
-        console.log('mouse entered');
         color.style.backgroundColor = 'rgba(' 
         + randomColor() + ',' + randomColor() 
         + ',' + randomColor() + '\)'
     })
     
 }
+
+
 

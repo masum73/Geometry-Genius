@@ -8,12 +8,12 @@ function getInputFieldValue(inputId){
 
 function areaCalculationWithThreeNumbers(firstValue, secondValue){
     const number = 0.5;
-    const area = number * firstValue * secondValue;
+    const area = (number * firstValue * secondValue).toFixed(2);
     return area;
 }
 
 function areaCalculationWithTwoNumbers(firstValue, secondValue){
-    const area = firstValue * secondValue;
+    const area = (firstValue * secondValue).toFixed(2);
     return area;
 }
 
@@ -24,17 +24,7 @@ function getInnerTextValue(elementId){
     return innerFieldValue;
 }
 
-function setInnerTextValueWithThreeNumbers(elementId,firstValue,secondValue){
-    const innerField = document.getElementById(elementId);
-    const totalArea = areaCalculationWithThreeNumbers(firstValue, secondValue);
-    innerField.innerText = totalArea;
-}
 
-function setInnerTextValueWithTwoNumbers(elementId,firstValue,secondValue){
-    const innerField = document.getElementById(elementId);
-    const totalArea = areaCalculationWithTwoNumbers(firstValue, secondValue);
-    innerField.innerText = totalArea;
-}
 
 function calculateEllipseArea(firstValue,secondValue){
     const piNumber = 3.14;
@@ -46,13 +36,4 @@ function setEllipseValue(elementId,firstValue,secondValue){
     const innerField = document.getElementById(elementId);
     const totalArea = calculateEllipseArea(firstValue, secondValue);
     innerField.innerText = totalArea;
-}
-
-function displayCalculation(elementId){
-    const element = document.getElementById(elementId);
-    if(element.classList.contains('hidden')===true){
-        element.classList.remove('hidden');
-    }else{
-        element.classList.add('hidden');
-    }
 }

@@ -49,3 +49,22 @@ document.getElementById('btn-ellipse-calculate').addEventListener('click',functi
     setEllipseValue('ellipse-calculation-field', pentagonFirstInputValue, pentagonLastInputValue);
     displayCalculation('ellipse')
 })
+
+// color change
+const colorChange = document.getElementsByClassName('color-change');
+console.log(colorChange);
+
+for(const color of colorChange){
+    console.log(color);
+    function randomColor() {
+        return Math.floor(Math.random() * 255);
+    }
+    color.addEventListener('mouseenter',function(){
+        console.log('mouse entered');
+        color.style.backgroundColor = 'rgba(' 
+        + randomColor() + ',' + randomColor() 
+        + ',' + randomColor() + '\)'
+    })
+    
+}
+

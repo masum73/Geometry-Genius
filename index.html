@@ -86,7 +86,7 @@
                     <img class="mt-3" src="images/rhombus.png" alt="" />
                     <div class="p-5 text-center">
                         <h5 class="mb-2 text-2xl font-bold">Rhombus</h5>
-                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x d1 x d2</p>
+                        <p class="mb-3 font-normal text-gray-700">Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                        <!-- inputs -->
                        <div class="flex flex-row gap-2 mb-3">
                         <div class="flex flex-row gap-2 justify-center items-center">
@@ -94,7 +94,7 @@
                             <label for="" class="text-sm font-medium">cm</label>
                         </div>
                         <div class="flex flex-row gap-2 justify-center items-center">
-                            <input type="number" name="" id="rhombus-last-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="d1">
+                            <input type="number" name="" id="rhombus-last-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="d2">
                             <label for="" class="text-sm font-medium">cm</label>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                                 <label for="" class="text-sm font-medium">cm</label>
                             </div>
                             <div class="flex flex-row gap-2 justify-center items-center">
-                                <input type="number" name="" id="ellipse-last-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="d1">
+                                <input type="number" name="" id="ellipse-last-input" class="bg-gray-50  text-sm rounded-lg block w-full p-2.5" placeholder="b">
                                 <label for="" class="text-md font-medium">cm</label>
                             </div>
                         </div>
@@ -143,36 +143,36 @@
             <!-- area calculation div -->
             <div class="ml-6 px-6 border border-gray-200 rounded-lg h-3/5 w-1/5">
                 <h1 class="text-xl font-medium underline text-center mb-6">Area Calculation</h1>
-                <div class="">
-                    <div class="flex justify-between items-center mb-3">
+                <div id="" class="">
+                    <div id="triangle" class="flex justify-between items-center mb-3 hidden">
                         <h1 class="">1. Triangle</h1>
                         <h1 id="triangle-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
+                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
                     </div>
-                    <div class="flex justify-between items-center mb-3">
+                    <div id="rectangle" class="flex justify-between items-center mb-3 hidden">
                         <h1 class="">2. Rectangle</h1>
                         <h1 id="rectangle-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
+                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
                     </div>
-                    <div class="flex justify-between items-center mb-3">
+                    <div id="parallelogram" class="flex justify-between items-center mb-3 hidden">
                         <h1 class="">3. Parallelogram</h1>
                         <h1 id="parallelogram-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
+                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
                     </div>
-                    <div class="flex justify-between items-center mb-3">
+                    <div id="rhombus" class="flex justify-between items-center mb-3 hidden">
                         <h1 class="">4. Rhombus</h1>
                         <h1 id="rhombus-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
+                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
                     </div>
-                    <div class="flex justify-between items-center mb-3">
+                    <div id="pentagon" class="flex justify-between items-center mb-3 hidden">
                         <h1 class="">5. Pentagon</h1>
                         <h1 id="pentagon-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
+                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
                     </div>
-                    <div class="flex justify-between items-center mb-3">
+                    <div id="ellipse" class="flex justify-between items-center mb-3 hidden">
                         <h1 class="">6. Ellipse</h1>
                         <h1 id="ellipse-calculation-field" class="text-center">0</h1>
-                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m2</button>
+                        <button class="px-6 py-1 bg-blue-500 rounded-lg text-white font-medium w-auto">Convert to m<sup>2</sup></button>
                     </div>
                 </div>
                 

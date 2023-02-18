@@ -47,3 +47,12 @@ function setEllipseValue(elementId,firstValue,secondValue){
     const totalArea = calculateEllipseArea(firstValue, secondValue);
     innerField.innerText = totalArea;
 }
+
+function displayCalculation(elementId){
+    const element = document.getElementById(elementId);
+    if(element.classList.contains('hidden')===true){
+        element.classList.remove('hidden');
+    }else{
+        element.classList.add('hidden');
+    }
+}

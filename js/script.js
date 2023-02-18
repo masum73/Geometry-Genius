@@ -1,9 +1,15 @@
-//triangle calculation
+
 let serial = 0;
-function displayData(serial, areaName, areaCalculation) {
-    const container = document.getElementById("table-container");
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
+// display data - area calculation part
+function displayData(areaName, areaCalculation) {
+    if(areaCalculation === undefined){
+        alert('enter valid input');
+        return;
+    }else{
+        serial = serial + 1;
+        const container = document.getElementById("table-container");
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
       <td>${serial}</td>
       <td>${areaName}</td>
       <td>${areaCalculation}</td>
@@ -15,21 +21,22 @@ function displayData(serial, areaName, areaCalculation) {
       
     `;
     container.appendChild(tr);
+    }
+    
   }
 
+
+//triangle calculation
 document.getElementById('btn-triangle-calculate').addEventListener('click',function(){
 
     const triangleFirstInputValue = getInputFieldValue('triangle-first-input');
     const triangleLastInputValue = getInputFieldValue('triangle-last-input');
 
-    console.log(triangleFirstInputValue);
-    console.log(triangleLastInputValue);
+    console.log(typeof triangleFirstInputValue);
 
     const area = areaCalculationWithThreeNumbers(triangleFirstInputValue, triangleLastInputValue);
-    console.log(area);
-
-    serial = serial + 1;
-    displayData(serial,'Triangle',area);
+    displayData('Triangle',area);
+    
 
 })
 //rectangle calculation
@@ -38,17 +45,16 @@ document.getElementById('btn-rectangle-calculate').addEventListener('click',func
     const rectangleLastInputValue = getInputFieldValue('rectangle-last-input');
 
     const area = areaCalculationWithTwoNumbers(rectangleFirstInputValue,rectangleLastInputValue);
-
-    serial = serial+1;
-    displayData(serial,'Rectangle',area);
+    displayData('Rectangle',area);
+    
 })
 //Parallelogram calculation
 document.getElementById('btn-parallelogram-calculate').addEventListener('click',function(){
     const parallelogramFirstInputValue = getInputFieldValue('parallelogram-first-input');
     const parallelogramLastInputValue = getInputFieldValue('parallelogram-last-input');
     const area = areaCalculationWithTwoNumbers(parallelogramFirstInputValue,parallelogramLastInputValue);
-    serial = serial+1;
-    displayData(serial,'Parallelogram',area);
+    displayData('Parallelogram',area);
+    
 
 })
 //rhombus calculation
@@ -56,8 +62,8 @@ document.getElementById('btn-rhombus-calculate').addEventListener('click',functi
     const rhombusFirstInputValue = getInputFieldValue('rhombus-first-input');
     const rhombusLastInputValue = getInputFieldValue('rhombus-last-input');
     const area = areaCalculationWithThreeNumbers(rhombusFirstInputValue,rhombusLastInputValue)
-    serial = serial+1;
-    displayData(serial,'Rhombus',area);
+    displayData('Rhombus',area);
+    
 
 })
 //pentagon calculation 
@@ -65,8 +71,8 @@ document.getElementById('btn-pentagon-calculate').addEventListener('click',funct
     const pentagonFirstInputValue = getInputFieldValue('pentagon-first-input');
     const pentagonLastInputValue = getInputFieldValue('pentagon-last-input');
     const area = areaCalculationWithTwoNumbers(pentagonFirstInputValue,pentagonLastInputValue);
-    serial = serial+1;
-    displayData(serial,'Pentagon',area);
+    displayData('Pentagon',area);
+    
 })
 
 
@@ -75,8 +81,7 @@ document.getElementById('btn-ellipse-calculate').addEventListener('click',functi
     const pentagonFirstInputValue = getInputFieldValue('ellipse-first-input');
     const pentagonLastInputValue = getInputFieldValue('ellipse-last-input');
     const area = calculateEllipseArea(pentagonFirstInputValue,pentagonLastInputValue)
-    serial = serial+1;
-    displayData(serial,'Pentagon',area);
+    displayData('Ellipse',area);
 
 })
 

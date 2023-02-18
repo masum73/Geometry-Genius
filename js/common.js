@@ -8,11 +8,17 @@ function getInputFieldValue(inputId){
 
 function areaCalculationWithThreeNumbers(firstValue, secondValue){
     const number = 0.5;
+    if(isNaN(firstValue) || isNaN(secondValue)){
+        return;
+    }
     const area = (number * firstValue * secondValue).toFixed(2);
     return area;
 }
 
 function areaCalculationWithTwoNumbers(firstValue, secondValue){
+    if(isNaN(firstValue) || isNaN(secondValue)){
+        return;
+    }
     const area = (firstValue * secondValue).toFixed(2);
     return area;
 }
